@@ -50,4 +50,13 @@ mostrarPergunta();
 function mostrarPergunta(){
     perguntaAtual = perguntas[posiçãoAtual];
     cxPerguntas.textContent = perguntaAtual.enunciado;
+    mostrarAlternativaS();
+}
+
+function mostrarAlternativas(){
+    for (var alternativa of perguntaAtual.alternativas) {
+         var botaoAlternativas = document.createElement("button");
+         botaoAlternativas.textContent = alternativa;
+         cxAlternativas.appendChild(botaoAlternativas);
+ }
 }
